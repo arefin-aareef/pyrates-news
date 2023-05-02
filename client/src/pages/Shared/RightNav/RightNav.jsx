@@ -22,7 +22,7 @@ const RightNav = () => {
         <FaGithub /> Login with Github
       </Button>
       <div>
-        <h4>Find Us On</h4>
+        <h4 className="mt-4">Find Us On</h4>
         <ListGroup>
           <ListGroup.Item>
             <FaFacebook /> Facebook
