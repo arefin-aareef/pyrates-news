@@ -1,7 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Button, ListGroup } from "react-bootstrap";
-import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaGoogle,
+  FaGithub,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
+import QZone from "../QZone/QZone";
+import bg from "../../../assets/bg.png";
 
 const RightNav = () => {
   return (
@@ -16,10 +24,20 @@ const RightNav = () => {
       <div>
         <h4>Find Us On</h4>
         <ListGroup>
-          <ListGroup.Item> <FaFacebook /> Facebook </ListGroup.Item>
-          <ListGroup.Item> <FaTwitter /> Twitter </ListGroup.Item>
-          <ListGroup.Item> <FaInstagram /> Instagram </ListGroup.Item>
+          <ListGroup.Item>
+            <FaFacebook /> Facebook
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <FaTwitter /> Twitter
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <FaInstagram /> Instagram
+          </ListGroup.Item>
         </ListGroup>
+      </div>
+      <QZone></QZone>
+      <div>
+        <img src={bg} alt="" />
       </div>
     </div>
   );
