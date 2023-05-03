@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import NewsLayout from "../layouts/NewsLayout";
 import Category from "../pages/Home/Category/Category";
-import Home from "../pages/Home/Home/Home";
 import News from "../pages/News/News/News";
 
 // eslint-disable-next-line no-unused-vars
@@ -13,7 +12,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Category></Category>,
+                loader: () => fetch('http://localhost:5000/news')
             },
             {
                 path: '/category/:id',
