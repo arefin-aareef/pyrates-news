@@ -7,7 +7,6 @@ import { FaRegBookmark, FaRegEye, FaShareAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
-
 const NewsCard = ({ news }) => {
   const { _id, title, details, image_url, author, total_view, rating } = news;
 
@@ -36,6 +35,7 @@ const NewsCard = ({ news }) => {
       </Card.Body>
       <Card.Footer className="text-muted d-flex">
         <div className="flex-grow-1">
+            
             <span>{rating?.number}</span>
         </div>
         <div>
