@@ -1,22 +1,38 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import LoginLayout from "../layouts/LoginLayout";
 import Main from "../layouts/Main";
 import NewsLayout from "../layouts/NewsLayout";
 import Category from "../pages/Home/Category/Category";
+import Login from "../pages/Login/Login/Login";
+import Register from "../pages/Login/Register/Register";
 import News from "../pages/News/News/News";
 
 // eslint-disable-next-line no-unused-vars
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>,
+        element: <LoginLayout></LoginLayout>,
         children: [
             {
                 path: '/',
-                element: <Category></Category>,
-                loader: () => fetch('http://localhost:5000/news')
+                element: <Navigate to="/category/0"></Navigate>
             },
             {
-                path: '/category/:id',
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            }
+        ]
+    },
+    {
+        path: '/category',
+        element: <Main></Main>,
+        children: [
+            {
+                path: ':id',
                 element: <Category></Category>,
                 loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
             }
