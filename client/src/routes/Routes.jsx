@@ -6,6 +6,7 @@ import Category from "../pages/Home/Category/Category";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import News from "../pages/News/News/News";
+import Terms from "../pages/Shared/Terms/Terms";
 import PrivateRoutes from "./PrivateRoutes";
 
 // eslint-disable-next-line no-unused-vars
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/terms',
+                element: <Terms></Terms>
             }
         ]
     },
