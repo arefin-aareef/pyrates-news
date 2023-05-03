@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('env ', import.meta.env.VITE_PASS);
 const firebaseConfig = {
-  apiKey: "AIzaSyAu3RIoLXw2MQUakmbNZjg20mFkmpYnJeg",
-  authDomain: "pyrates-news.firebaseapp.com",
-  projectId: "pyrates-news",
-  storageBucket: "pyrates-news.appspot.com",
-  messagingSenderId: "489387402313",
-  appId: "1:489387402313:web:acdfc502a02bb53b9fcb98"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
